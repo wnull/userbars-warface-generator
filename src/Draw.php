@@ -26,7 +26,7 @@ final class Draw extends Factory
     /**
      * @param array $data
      */
-    public function make(array $data)
+    public function make(array $data): void
     {
         $required = ['nickname', 'server', 'rank_id'];
 

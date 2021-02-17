@@ -4,6 +4,7 @@
     "type": "library",
     "license": "MIT",
     "require": {
+        "php": ">=7.4",
         "wnull/warface-api": "3.0",
         "ext-imagick": "*",
         "ext-json": "*"
