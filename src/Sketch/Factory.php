@@ -14,6 +14,7 @@ class Factory implements IFactory
 
     protected Client $client;
     protected \Imagick $object;
+    protected Performance $perform;
 
     /**
      * @param string $background
@@ -45,8 +46,7 @@ class Factory implements IFactory
     public function achievements(): void
     {
         try {
-            $perform = new Performance();
-            $result = $perform->detected($this->user['achievements']);
+            $result = $this->perform->detected($this->user['achievements']);
 
             $mask = [Achievement::STRIPE, Achievement::BADGE, Achievement::MARK];
             uksort($result, fn ($a, $b) => array_search($a, $mask) > array_search($b, $mask));

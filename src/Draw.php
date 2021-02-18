@@ -2,7 +2,7 @@
 
 namespace WFub;
 
-use WFub\{Enums\Achievement, Enums\Failure, Sketch\Factory, Enums\Userbar};
+use WFub\{Enums\Achievement, Enums\Failure, Sketch\Achievements\Performance, Sketch\Factory, Enums\Userbar};
 use Warface\{Client, Enums\Location};
 
 final class Draw extends Factory
@@ -76,8 +76,9 @@ final class Draw extends Factory
 
     /**
      * @param array $data
+     * @param array $dir
      */
-    public function add(array $data): void
+    public function add(array $data, array $dir = []): void
     {
         $required = [Achievement::MARK, Achievement::BADGE, Achievement::STRIPE];
 
@@ -86,6 +87,7 @@ final class Draw extends Factory
         }
 
         $this->user['achievements'] = $data;
+        $this->perform = new Performance($dir);
     }
 
     /**
