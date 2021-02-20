@@ -156,4 +156,4 @@ After execution, a similar result is obtained:
 
 ## License
 
-The library is distributed under the [MIT](https://github.com/wnull/wfub/blob/master/LICENSE) license
+The library is distributed under the [MIT](https://github.com/wnull/wfub/blob/master/LICENSE) license.
