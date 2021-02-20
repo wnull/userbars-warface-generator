@@ -20,7 +20,7 @@ composer require wnull/wfub
 
 Before using it, you should read the description of the available methods and their parameters.
 
-#### Простое использование
+#### Common use
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
@@ -36,18 +36,18 @@ $image = $ub->create();
 
 #### Localization
 
-By default, the Russian localization is set.
+By default, the russian localization is set.
 
 ```php
-$ru = new Draw(Location::RU);
-$ru->get('Сласть', Servers::ALPHA);
+$ub = new Draw(Location::RU);
+$ub->get('Сласть', Servers::ALPHA);
 ```
 
 The choice of localization depends on the design of the userbar, as well as the `get()` method, which will be requested to the corresponding API server.
 
 ```php
-$en = new Draw(Location::EN);
-$en->get('thebavoz', Servers::EU);
+$ub = new Draw(Location::EN);
+$ub->get('thebavoz', Servers::EU);
 ```
 
 ## Methods and description
