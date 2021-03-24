@@ -41,10 +41,10 @@ $image = $ub->create();
 
 #### Localization
 
-The constructor accepts an optional localization parameter (by default, the `RU` is set), where `_LOCALE_` can be either `EN` or `RU`.
+You can configure localization by passing an optional parameter (default `RU`), where `X` can be either `EN` or `RU`.
 
 ```php
-$ub = new Draw(Location::_LOCALE_); 
+$ub = new Draw(Location::X); 
 ```
 
 The choice of localization influences on the design of the userbar, as well as the `get()` method, which will be requested to the corresponding API server.
@@ -56,11 +56,11 @@ Below is a list of all available methods with their description of valid paramet
 * ### get()
 
     **Required** method that executes a request to the game API and retrieves game statistics.
-    
+
 	```php
 	get(string $name, int $server): void
 	```
- 
+
 * ### make()
 
     The method is an alternative to the `get()` method, only without a request to the game API. The idea is to create your own game character data based on an array.
@@ -68,13 +68,13 @@ Below is a list of all available methods with their description of valid paramet
  	```php
 	make(array $data): void
 	```
-  
+
 	To use it correctly, you must pass at least **3 required parameters** in the associative array, such as: <code>nickname</code>, <code>server</code>, <code>rank_id</code>.
 
 * ### edit()
 
     The method is used to change the game statistics obtained earlier by the `get()` or `make()` method.
-    
+
 	```php
 	edit(array $data): void
 	```
@@ -86,10 +86,11 @@ Below is a list of all available methods with their description of valid paramet
 	```php
 	add(array $data, array $dir = []): void
 	```
+
 	As the first parameter you need to pass an associative array with the required keys: `mark`, `base`, or `stripe`, whose values are numeric achievement IDs. 
-	
-	As the second (optional) parameter, you can pass an associative array with the key `dir`, the value of which will specify the path to the local achievement's directory.
-	
+
+	As the second (optional) parameter, you can pass an associative array with the key dir, the value of which will specify the path to the local with achievement's directory.
+
 * ### create()
 
     **Required** method that generates the final image (the `Imagick` object).
@@ -97,8 +98,10 @@ Below is a list of all available methods with their description of valid paramet
 	```php
 	create(string $type = Userbar::USER): \Imagick
 	```
- 
-	The method accepts a parameter of the type of the userbar. The default value is `user`. Valid values: `user`, `join`, or `clan`.
+
+	The method accepts a parameter of the type of the userbar. The default value is `user`.
+
+	Valid values: `user`, `join`, or `clan`.
 
 ## License
 
