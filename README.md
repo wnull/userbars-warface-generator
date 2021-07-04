@@ -1,9 +1,9 @@
 # Generator game userbars Warface
 
-[![Travis (.org)](https://img.shields.io/travis/wnull/wfub?style=flat-square)](//travis-ci.com/wnull/wfub)
-[![Packagist Downloads](https://img.shields.io/packagist/dm/wnull/wfub?color=informational&style=flat-square)](//packagist.org/packages/wnull/wfub)
-[![Packagist License](https://img.shields.io/packagist/l/wnull/wfub?style=flat-square)](//packagist.org/packages/wnull/wfub) 
-[![Packagist Version](https://img.shields.io/packagist/v/wnull/wfub?style=flat-square)](//packagist.org/packages/wnull/wfub)
+[![Travis (.org)](https://img.shields.io/travis/wnull/warface-ub?style=flat-square)](//travis-ci.com/wnull/warface-ub)
+[![Packagist Downloads](https://img.shields.io/packagist/dm/wnull/warface-ub?color=informational&style=flat-square)](//packagist.org/packages/wnull/warface-ub)
+[![Packagist License](https://img.shields.io/packagist/l/wnull/warface-ub?style=flat-square)](//packagist.org/packages/wnull/warface-ub) 
+[![Packagist Version](https://img.shields.io/packagist/v/wnull/warface-ub?style=flat-square)](//packagist.org/packages/wnull/warface-ub)
 
 A convenient and simple library for generating Warface game userbars, written in PHP.
 
@@ -18,7 +18,7 @@ To work correctly, you will need `php` version `>=7.4`, as well as the `Imagick`
 You can install it using Composer using the following command:
 
 ```sh
-composer require wnull/wfub
+$ composer require wnull/warface-ub
 ```
 
 ## Using
@@ -30,7 +30,7 @@ Before using it, you should read the description of the available methods and th
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
-use WFub\Draw;
+use warface-ub\Draw;
 use Warface\Enums\{Location, Game\Servers};
 
 $ub = new Draw(Location::RU);
@@ -105,4 +105,4 @@ Below is a list of all available methods with their description of valid paramet
 
 ## License
 
-The library is distributed under the [MIT](https://github.com/wnull/wfub/blob/master/LICENSE) license.
+The library is distributed under the [MIT](https://github.com/wnull/warface-ub/blob/master/LICENSE) license.
